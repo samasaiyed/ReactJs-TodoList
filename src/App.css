@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background: linear-gradient(90deg, #FFE4E1, #C08081);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-app {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  width: 520px;
+  background: #FFF0F5;
+  text-align: center;
+  margin: 50px auto;
+  border-radius: 10px;
+  padding-bottom: 40px;
+}
+h1{
+  margin: 32px 0;
+  color: #000;
+  font-size: 24px;
+}
+.complete{
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+.todo-form{
+  margin-bottom: 32px;
+}
+.todo-input{
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #F2C1D1;
+  outline: none;
+  width: 320px;
+  background: transparent;
+  color: #292929;
+  font-size: 14px;
+  font-weight: 600;
+}
+.todo-input::placeholder{
+  color: #292929;
+  font-size: 14px;
+}
+.todo-button
+{
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  font-size: 14px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #F2C1D1, #563C5C);
+  color: #000;
+  text-transform: capitalize;
+} 
+.todo-input.edit{
+  border: 2px solid #D78BA4;
+}
+.todo-button.edit{
+  background: linear-gradient(90deg, #D78BA4, #4d3e51);
+  padding: 15px 22px;
+}
+.todo-container{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.todo-row{
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 4px auto;
+  color: #fff;
+  background: linear-gradient(#d22f45, #410101);
+  padding: 16px;
+  border-radius: 5px;
+  width: 90%;
 }
-
-.App-link {
-  color: #61dafb;
+.todo-row:nth-child(4n+3){
+  background: linear-gradient(#c23e6e, #a40037);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-row:nth-child(4n+2){
+  background: linear-gradient(#74383d, #2a1a2d);
+}
+.todo-row:nth-child(4n+1){
+  background: linear-gradient(#7C42A5, #1C023A);
+}
+.icons{
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+.delete-icon{
+  margin-right: 5px;
+  color: #fff;
+}
+.edit-icon{
+  color: #fff;
 }
